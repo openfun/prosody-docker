@@ -44,7 +44,7 @@ RUN mkdir -p /usr/share/prosody/modules && \
 
 COPY --chown=prosody:prosody files/etc/prosody/prosody.cfg.lua /etc/prosody/prosody.cfg.lua
 
-VOLUME [ "/etc/prosody" ]
+VOLUME [ "/etc/prosody", "/var/lib/prosody" ]
 USER prosody
 
 EXPOSE 5222 5347 5280
