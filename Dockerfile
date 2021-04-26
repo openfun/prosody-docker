@@ -16,7 +16,8 @@ RUN apt-get update && \
       libssl1.1 \
       libssl-dev \
       luarocks \
-      lua-event && \
+      lua-event \
+      lua-dbi-postgresql && \
     luarocks install basexx 0.4.1-1 && \
     luarocks install luajwtjitsi 2.0-0 && \
     rm -rf /var/lib/apt/lists/*
