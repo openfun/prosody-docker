@@ -40,6 +40,7 @@ RUN mkdir -p /usr/share/prosody/modules && \
     tar xzf jitsi-meet.tgz -C jitsi-meet --strip-components 1 && \
     cp -r ./jitsi-meet/resources/prosody-plugins/* /usr/share/prosody/modules && \
     curl -so /usr/share/prosody/modules/mod_token_affiliation.lua https://raw.githubusercontent.com/emrahcom/emrah-buster-templates/6ae86bbff1459b669b311f3ec00946921cd683c9/machines/eb-jitsi/usr/share/jitsi-meet/prosody-plugins/mod_token_affiliation.lua && \
+    curl -so /usr/share/prosody/modules/mod_muc_moderation.lua https://hg.prosody.im/prosody-modules/raw-file/5f12c75fd210/mod_muc_moderation/mod_muc_moderation.lua && \
     rm -rf jitsi-meet.tgz jitsi-meet && \
     chown -R prosody. /usr/share/prosody/modules
 
